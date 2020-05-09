@@ -1,0 +1,22 @@
+h2, h3 {
+  text-align: center;
+}
+
+div {
+  max-width: 20rem;
+  margin: auto;
+  display: flex;
+}
+
+label, input {
+  display: block;
+  margin: 0 0.25rem;
+}
+
+label {
+  flex-grow: 1;
+}
+
+input {
+  width: 3rem;
+}

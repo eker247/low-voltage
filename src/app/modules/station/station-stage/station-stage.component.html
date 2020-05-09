@@ -1,0 +1,34 @@
+<h2>Station Stage</h2>
+
+<ng-container [ngSwitch]="substage">
+  <div *ngSwitchCase="'Choosing'">
+    <h1>While players exist go with next auctions</h1>
+
+    <h3>current player</h3>
+    <div>player: {{ player.name + ' ' + player.cash }}</div>
+
+    <h3>next stations</h3>
+    <div *ngFor="let station of nextStations">
+      {{ station.name }} {{ station.price }}PLN
+    </div>
+
+    <h3>current stations</h3>
+    <div *ngFor="let station of currentStations">
+      <div>Station: {{ station.name }} {{ station.price }}PLN</div>
+      <button (click)="chooseStation(station)">Choose station</button>
+    </div>
+
+    <button (click)="skipChoosingStation()">Skip choosing station</button>
+  </div>
+
+  <app-auction
+    *ngSwitchCase="'Auction'"
+    [stationStage]="stationStage"
+    (stageFinished)="prepareNextPlayerAndStations($event)"
+  ></app-auction>
+
+  <div *ngSwitchCase="'End'">
+    <h1>No more players</h1>
+    <a [routerLink]="[nextStageLink]">Next Stage</a>
+  </div>
+</ng-container>

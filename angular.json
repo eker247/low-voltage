@@ -122,6 +122,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "low-voltage"
+    }
+  },
+  "defaultProject": "low-voltage",
+  "cli": {
+    "analytics": "479f9479-7f26-4742-a29a-27048e438a6e"
+  }
 }

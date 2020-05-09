@@ -1,0 +1,13 @@
+.nav {
+  list-style-type: none;
+  border-bottom: 1px solid black;
+  padding-bottom: 1px;
+
+  li {
+    display: inline-block;
+
+    a {
+      padding: 3px 6px;
+    }
+  }
+}

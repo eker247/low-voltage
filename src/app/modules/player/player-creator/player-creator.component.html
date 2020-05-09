@@ -1,0 +1,12 @@
+<h2>Player creator</h2>
+
+<button (click)="addPlayer()">Add player</button>
+<button (click)="savePlayers()">Start Game</button>
+
+<form [formGroup]="form">
+  <div *ngFor="let ctrl of form.controls['players']['controls']; let i = index">
+    <label for="ctrl">Player name</label>
+    <input [formControl]="ctrl" />
+    <button (click)="removePlayer(i)">Remove</button>
+  </div>
+</form>

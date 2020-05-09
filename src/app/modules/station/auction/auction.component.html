@@ -1,0 +1,26 @@
+<h3>Auction html</h3>
+<ng-container *ngIf="currentPlayer && stationStage.actualStation; else noPlayerTemplate">
+  <div>
+    Auction for {{ stationStage.actualStation.name }}, price:
+    {{ stationStage.actualPrice }}
+  </div>
+  <div>
+    Player with highest wage {{ stationStage.playerWithHighestWage.name }}
+  </div>
+  <div>
+    Current player {{ currentPlayer.name }}, cash: {{ currentPlayer.cash }}
+  </div>
+  <input
+    type="number"
+    [value]="(+stationStage.actualPrice + 1)"
+    [min]="(+stationStage.actualPrice + 1)"
+    [max]="currentPlayer.cash"
+    #playerWage
+  />
+  <button (click)="outbid(playerWage.value)">Outbit</button>
+  <button (click)="skipPlayer()">Resign</button>
+</ng-container>
+
+<ng-template #noPlayerTemplate>
+  No player available
+</ng-template>

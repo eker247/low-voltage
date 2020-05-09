@@ -1,0 +1,77 @@
+<h2>Game Options</h2>
+
+<h3>General</h3>
+<div>
+  <label for="STARTING_CASH">Starting cash</label>
+  <input id="STARTING_CASH" type="number" min="0" max="999999" [(ngModel)]="setting['STARTING_CASH']" />
+</div>
+<div>
+  <label for="LEVEL">Starting level</label>
+  <input id="LEVEL" type="number" min="0" max="999999" [(ngModel)]="setting['LEVEL']" />
+</div>
+<div>
+  <label for="CRITIC_LEVEL">Critical level</label>
+  <input id="CRITIC_LEVEL" type="number" min="0" max="999999" [(ngModel)]="setting['CRITIC_LEVEL']" />
+</div>
+
+<h3>Station</h3>
+<div>
+  <label for="STATIONS_ALL">All visible stations</label>
+  <input id="STATIONS_ALL" type="number" min="0" max="999999" [(ngModel)]="setting['STATIONS_ALL']" />
+</div>
+<div>
+  <label for="STATIONS_PART">Station for sale</label>
+  <input id="STATIONS_PART" type="number" min="0" max="999999" [(ngModel)]="setting['STATIONS_PART']" />
+</div>
+
+<h3>Board</h3>
+<div>
+  <label for="BOARD_HEIGHT">Height</label>
+  <input id="BOARD_HEIGHT" type="number" min="0" max="999999" [(ngModel)]="setting['BOARD_HEIGHT']" />
+</div>
+<div>
+  <label for="BOARD_WIDTH">Width</label>
+  <input id="BOARD_WIDTH" type="number" min="0" max="999999" [(ngModel)]="setting['BOARD_WIDTH']" />
+</div>
+
+<h3>Players</h3>
+<div>
+  <label for="NUMBER_OF_PLAYERS">Number of players</label>
+  <input id="NUMBER_OF_PLAYERS" type="number" min="0" max="999999" [(ngModel)]="setting['NUMBER_OF_PLAYERS']" />
+</div>
+<div>
+  <label for="HOUSES_PER_PLAYER">Houses per player</label>
+  <input id="HOUSES_PER_PLAYER" type="number" min="0" max="999999" [(ngModel)]="setting['HOUSES_PER_PLAYER']" />
+</div>
+
+<h3>Houses</h3>
+<div>
+  <label for="HOUSES_TO_PROMOTE_LEVEL">Houses to promote level</label>
+  <input id="HOUSES_TO_PROMOTE_LEVEL" type="number" min="0" max="999999" [(ngModel)]="setting['HOUSES_TO_PROMOTE_LEVEL']" />
+</div>
+<div>
+  <label for="HOUSE_BASIC_PRICE">Basic price</label>
+  <input id="HOUSE_BASIC_PRICE" type="number" min="0" max="999999" [(ngModel)]="setting['HOUSE_BASIC_PRICE']" />
+</div>
+<div>
+  <label for="HOUSE_EXTRA_PRICE">Extra price</label>
+  <input id="HOUSE_EXTRA_PRICE" type="number" min="0" max="999999" [(ngModel)]="setting['HOUSE_EXTRA_PRICE']" />
+</div>
+<div>
+  <label for="HOUSE_MAX_OWNERS">Max owners</label>
+  <input id="HOUSE_MAX_OWNERS" type="number" min="0" max="999999" [(ngModel)]="setting['HOUSE_MAX_OWNERS']" />
+</div>
+<div>
+  <label for="HOUSE_PRICE_DIVISOR">Price distance divisor</label>
+  <input id="HOUSE_PRICE_DIVISOR" type="number" min="0" max="999999" [(ngModel)]="setting['HOUSE_PRICE_DIVISOR']" />
+</div>
+
+<h3>Profit</h3>
+<div>
+  <label for="PROFIT_BASE">No house</label>
+  <input id="PROFIT_BASE" type="number" min="0" max="999999" [(ngModel)]="setting['PROFIT_BASE']" />
+</div>
+<div>
+  <label for="PROFIT_EXTRA">Per house</label>
+  <input id="PROFIT_EXTRA" type="number" min="0" max="999999" [(ngModel)]="setting['PROFIT_EXTRA']" />
+</div>
